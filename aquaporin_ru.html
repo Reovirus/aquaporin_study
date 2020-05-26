@@ -59,12 +59,17 @@
             </div>
             <div class="row">
                 <div class="col s12">
-                <b>PDB ID</b>: 3GD8<br>
-    <b>Uniprot ID</b>: P55087 (AQP4_HUMAN)<br>
-    <b>Функция</b>: формирует водовпроводящий канал в клеточных мембранах, играет важную роль в водном обмене тканей мозга и в транспорте через глимфатическую систему <span class="citation" data-cites="ho2009crystal"></span>
-                (ликворный путь выведения продуктоы жизнедеятельности центральной нервной системы <span class="citation" data-cites="bacyinski2017paravascular"></span>) Необходим для поддержания нормального уровня воды и ликвора в коре мозга и параваскулярных пространствах.
-    Необходим для выведене веществ, растворенных в интерстициальной жидкости мозга, в том числе бета-амилоидов. Играет роль в поддержании концентрации мочи <span class="citation" data-cites="ho2009crystal"></span>.<br>
-    <b>Местонахождение в клетке</b>: содержится в цитоплазматической мембране и мембране эндосом <span class="citation" data-cites="lundbaek2004regulation"></span> <br></div>
+                    <b>PDB ID</b>: 3GD8<br>
+                    <b>Uniprot ID</b>: P55087 (AQP4_HUMAN)<br>
+                    <b>Функция</b>: формирует водовпроводящий канал в клеточных мембранах, играет важную роль в водном обмене тканей мозга и в транспорте через глимфатическую систему <span class="citation" data-cites="ho2009crystal"></span>
+                    (ликворный путь выведения продуктоы жизнедеятельности центральной нервной системы <span class="citation" data-cites="bacyinski2017paravascular"></span>) Необходим для поддержания нормального уровня воды и ликвора в коре мозга и параваскулярных пространствах.
+                    Необходим для выведене веществ, растворенных в интерстициальной жидкости мозга, в том числе бета-амилоидов. Играет роль в поддержании концентрации мочи <span class="citation" data-cites="ho2009crystal"></span>.<br>
+                    <b>Местонахождение в клетке</b>: содержится в цитоплазматической мембране и мембране эндосом <span class="citation" data-cites="lundbaek2004regulation"></span>
+                    <br>
+                    <b>Структура:</b> белок состоит из одной цепи, это видно при раскраске белка по цепям (рисунок 1), состоит из 223 
+                    аминокислот (1779 атомов). 
+                    <img src="all.jpg">
+                </div>
 </div>
 <div class='row'>
 <div class='col s8'>
@@ -232,7 +237,28 @@ Cолевой мостик&nbsp;&mdash; связь между положител
 <div class='col s12'>
     <h5>Положение в мембране.</h5>
     <p>Человеческий аквапорин 4 проходит через мембрану 6 раз. Существует программа TMHMM для быстрого предсказывания трансмембранных спиралей белков, работающая на вероятностных моделях <span class="citation" data-cites="moller2001evaluation"></span>.
-        Здесь мы сравниваем её результаты с результатами более тяжеловесных программ, считающих расположение белка с минимальной энергией.<span class="citation" data-cites="lomize2006positioning"></span></p>
+        Здесь мы сравниваем её результаты с результатами более тяжеловесных программ, считающих расположение белка с минимальной энергией.<span class="citation" data-cites="lomize2006positioning"></span>. Вот вывод TMHMM:</p>
+    <pre style="color: black;background-color: gray">
+# sp|P55087|AQP4_HUMAN Length: 323
+# sp|P55087|AQP4_HUMAN Number of predicted TMHs:  6
+# sp|P55087|AQP4_HUMAN Exp number of AAs in TMHs: 134.87582
+# sp|P55087|AQP4_HUMAN Exp number, first 60 AAs:  21.68082
+# sp|P55087|AQP4_HUMAN Total prob of N-in:        0.99818
+# sp|P55087|AQP4_HUMAN POSSIBLE N-term signal sequence
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	     1    32
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	    33    55
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	    56    69
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	    70    92
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	    93   111
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   112   134
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	   135   153
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   154   176
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	   177   188
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   189   211
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	   212   230
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   231   253
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	   254   323
+    </pre>
 </div>
 </div>
 <div class="row">
