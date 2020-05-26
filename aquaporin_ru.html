@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../style.css">
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://vsb.fbb.msu.ru/share/jmol/jsmol/JSmol.min.js"></script>
+        <script type="text/javascript">
+                       <!-- Define basic settings for JSMol applet -->
+                       var Info = {
+                       <!-- Use external resources for JSMol execution -->
+                       serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+                       j2sPath: "https://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+                       <!-- Activate HTML5 mode -->
+                       use: "HTML5",
+
+                       <!-- Basic visual settings -->
+                       width: 600,
+                       height: 600,
+                       color: "black",
+                       script: 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/start.spt"'
+                       };
+                       <!-- After full page will be loaded -->
+                       $(document).ready(function(){
+                       <!-- Create JSMol applet with name 'JSMol' and settings from Info -->
+                       <!-- And put in element with id='jmol' -->
+                       $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+                       $("#jmolStart").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/ligand.spt"', 'Ligand info'));
+                       $("#jmolHydrofob").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/hydrofob.spt"', 'Hydrofob Info'));
+                       $("#jmolAroma").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/aromatic.spt"', 'Aromatics Info'));
+                       $("#jmolIonic").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/ionic.spt"', 'Ionic Info'));
+                       $("#jmolTransmembrane").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~kuzka/term2/aquaporin.spt"', 'Membrane Info'));
+                       $("#jmolSurrounding").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~a19semenova/term2/prot.spt"', 'Surrounding Info'));
+                       $("#jmolResume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+                       $("#jmolSpinon").html(Jmol.jmolButton(JSMol, 'spin on', 'Spin on'));
+                       $("#jmolSpinoff").html(Jmol.jmolButton(JSMol, 'spin off', 'Spin off'));});
+               </script>
+        <link type="text/bib" href="https://kodomo.fbb.msu.ru/~kuzka/term2/aaquaporin_bibliography.bib">
+    </head>
+    <body>
+        <div class="navbar-fixed"><nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Kuzka</a>
+                <ul class="right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about_me.html">About myself</a></li>
+                    <li><a href="../term1/index.html">Term 1</a></li>
+                    <li><a href="../term2/index.html">Term 2</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </div>
+        </nav></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s4"><img src="../kuzka.jpg" height="200"></div>
+                <div class="col s8"><h1>Человеческий аквапорин 4.</h1></div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                <b>PDB ID</b>: 3GD8<br>
+    <b>Uniprot ID</b>: P55087 (AQP4_HUMAN)<br>
+    <b>Функция</b>: формирует водовпроводящий канал в клеточных мембранах, играет важную роль в водном обмене тканей мозга и в транспорте через глимфатическую систему <span class="citation" data-cites="ho2009crystal"></span>
+                (ликворный путь выведения продуктоы жизнедеятельности центральной нервной системы <span class="citation" data-cites="bacyinski2017paravascular"></span>) Необходим для поддержания нормального уровня воды и ликвора в коре мозга и параваскулярных пространствах.
+    Необходим для выведене веществ, растворенных в интерстициальной жидкости мозга, в том числе бета-амилоидов. Играет роль в поддержании концентрации мочи <span class="citation" data-cites="ho2009crystal"></span>.<br>
+    <b>Местонахождение в клетке</b>: содержится в цитоплазматической мембране и мембране эндосом <span class="citation" data-cites="lundbaek2004regulation"></span> <br></div>
+</div>
+<div class='row'>
+<div class='col s8'>
+    <h5> Низкомолекулярные лиганды</h5>
+    <ul>
+        <li>Глицерол (propane-1,2,3-triol)
+            <div class="row">
+            <div class="col s6"><figure><img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_1.jpg" width="90%"></figure></div>
+            <div class="col s6"><b>Формула:</b> C<sub>3</sub>H<sub>8</sub>O<sub>3</sub> or CH<sub>2</sub>OH-CHOH-CH<sub>2</sub>OH<br>
+            <b>Молярная масса: </b>92.09 г/моль
+              <p><a href="https://pubchem.ncbi.nlm.nih.gov/compound/753">PubChem</a></p></div></div>
+        </li>
+
+        <li>Бета-октилгликозид ((2R,3S,4S,5R,6R)-2-(hydroxymethyl)-6-octoxyoxane-3,4,5-triol)
+            <div class="row">
+            <div class="col s6"><figure><a href="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_2.jpg">
+            <img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_2.jpg" width="90%"></a></figure></div>
+            <div class="col s6"><b>Формула:</b> С<sub>14</sub>H<sub>28</sub>O<sub>6</sub><br>
+            <b>Молярная масса: </b>292.37 г/моль
+            <p><a href="https://pubchem.ncbi.nlm.nih.gov/compound/B-Octylglucoside">PubChem</a></p>
+            Используется для растворения мембранных белков <span class="citation" data-cites="kumar2002close"></span></div>
+            </div>
+
+        </li>
+    </ul>
+    <h5>Дисульфидные мостики</h5>
+    <figure><a href="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg">
+    <img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg" width="90%"></a></figure>
+    <p>В белке не обнаружены дисульфидные связи. В белке всего шесть цистеинов, они расположены на большом расстоянии друг от друга. Минимальное расстояние
+    между двумя серами цистеинов - 12.86 Å. На рисунке цистеины выделены оранжевым.</p>
+    <h5> Солевые мостики</h5>
+</div>
+</div>
+
+ <div class='row'>
+<div class='col s6'>
+Cолевой мостик&nbsp;&mdash; связь между положительно и&nbsp;отрицательно заряженной частицей, длина которой не&nbsp;превышает 4A<span class="citation" data-cites="kumar2002close"></span>. В&nbsp;белках так могут взаимодействовать протонированные (лизин, аргинин, гистолиз) и&nbsp;депротонированные (глушат, аспартат) аминокислоты. В&nbsp;Аквапорине 4&nbsp;так взаимодействует 4&nbsp;пары аминокислот (представлены в&nbsp;таблице&nbsp;1).<br>Для поиска аминокислот применялась команда ‘measure RANDE ALL' и<a href='http://pic.mbu.iisc.ernet.in/job.html'> этот сервис</a>.
+</div>
+<div class='col s6'>
+<p><i> Table for ionic iteractions</i></p>
+ <table class="datatable">
+   <thead> <caption style='text-align:center'> Table for ionic iteractions </caption>
+   <tr class="even head"> <th>Donor position</th><th>Donor resude</th> <th>Donor chain</th> <th>Acceptor position</th><th>Acceptor resude</th> <th>Acceptor chain</th></tr> </thead>
+   <tbody>
+   <tr class="odd"> <td>41</td> <td>Glu</td> <td>A</td> <td>95</td> <td>His</td> <td>A</td></tr>
+                           <tr class="even"> <td>249</td> <td>Glu</td> <td>A</td> <td>109</td> <td>Lys</td> <td>A</td></tr>
+                           <tr class="odd"> <td>179</td> <td>Asp</td> <td>A</td> <td>181</td> <td>Lys</td> <td>A</td></tr>
+                           <tr class="even"> <td>184</td> <td>Asp</td> <td>A</td> <td>182</td> <td>Arg</td> <td>A</td></tr>
+   </tbody>
+ </table>
+</div>
+</div>
+<div class="row">
+<div class='col s6'><figure><a href='https://i.imgur.com/vTcyHlL.jpg' target='_blank'> <img style='width:90%' src='https://i.imgur.com/vTcyHlL.jpg' alt='not today...'></a><figcaption class='podpis'><b>Рис. 1</b> Общий вид солевых заряженных аминокислот в белке.
+Желтым выделены протонированные аминокислоты, депротонированные показаны зеленым</figcaption></figure> </div>
+<div class='col s6'> <figure> <a href='https://i.imgur.com/N6eady7.jpg' target='_blank'> <img style='width:90%' alt='nottoday' src='https://i.imgur.com/N6eady7.jpg'></a>
+<figcaption class='podpis'><b> Рис. 2</b> Пример солевого мостика между E41 и H95. Циановым выделены вандерваальсовы радиусы, окраска по химическим элементам.</figcaption> 	</figure>
+</div>
+</div>
+<div class="row">
+<div class='col s12'><h5>Гидрофобные кластеры</h5></div>
+</div>
+<div class="row">
+<div class='col s6'> Так как белок трансмембранный, у&nbsp;него есть гидрофобные кластеры. Гидрофобным кластером мы&nbsp;называем группу аминокислот, которые вступают друг с&nbsp;другом в&nbsp;гидрофобные взаимодействия (не&nbsp;обязательно все со&nbsp;всеми)
+Для обнаружения таких кластеров были использованы метод &lsquo;measure RANGE ALL&rsquo;и&nbsp;все тот&nbsp;же тулл. В&nbsp;результате работы было обнаружено 15&nbsp;таких кластеров.</div>
+<div class='col s6'><figure><a href='https://i.imgur.com/J4yrgYc.gif'><img style='width:90%' alt='NOTFORYOU' src='https://i.imgur.com/J4yrgYc.gif'></a>
+<figcaption class='podpis'> <b>Рис. 3</b> Гидрофобные кластеры обозначены циановым, белок окрашен по структуре</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s6'>
+    <h5>Анализ окружения остатка</h5>
+    <p>
+        После обзора гидрофобных ядер было выбрано несколько остатков, соответсвующих требованиям задания, и проанализировано их окружение. На основании приведенных в аплете действий можно сделать вывод, что атомы, полностью покрывающие поверхность остатка, находятся на расстоянии около 5 ангстрем от него. Уже на расстоянии 4 ангстрема появляетя довольно много атомов окружения, как можно видеть на рисунках, однако о полном покрытии остатка мы можем говорить на расстоянии 5 ангстрем. Иллюстрации к этим ситуациям также приведены.</p>
+    </div>
+ <div class='col s6'>
+   <p><i>Table for distance between amino acids in hydrophobic clasters</i></p>
+     <table class="datatable">
+       <thead>
+       <tr class="even head"> <th>First position</th><th>First residue</th> <th>First residue chain</th> <th>Second position</th><th>Second residue</th> <th>Second residue chain</th> <th>Distance(Å)</th></tr></thead>
+       <tbody>
+                               <tr class="odd"> <td>168</td> <td>PHE</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>3.98</td></tr>
+                               <tr class="even"> <td>248</td> <td>TYR</td> <td>A</td> <td>244</td> <td>ALA</td> <td>A</td> <td>2.82</td></tr>
+                               <tr class="odd"> <td>239</td> <td>ILE</td> <td>A</td> <td>243</td> <td>LEU</td> <td>A</td> <td>3.67</td></tr>
+                               <tr class="even"> <td>161</td> <td>LEU</td> <td>A</td> <td>165</td> <td>ILE</td> <td>A</td> <td>3.96</td></tr>
+                               <tr class="odd"> <td>164</td> <td>LEU</td> <td>A</td> <td>239</td> <td>ILE</td> <td>A</td> <td>5.08</td></tr>
+                               <tr class="even"> <td>248</td> <td>TYR</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>4.21</td></tr>
+                               <tr class="odd"> <td>252</td> <td>PHE</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>3.7</td></tr>
+                               <tr class="even"> <td>172</td> <td>PHE</td> <td>A</td> <td>244</td> <td>ALA</td> <td>A</td> <td>6.74</td></tr>
+       </tbody>
+     </table>
+ </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        <p>Для вычисления характерного расстояния между атомами в ядре была составлена таблица, приведенная выше. В нем приведены измерения расстояний для находящихся рядом атомов в гидрофобном кластере. Расстояния были раситаны и для остатков, расположенных на большом расстоянии в цепи друг от друга, и на малом. Среднее расстояние равно 4.27 Å. Основываясь на средних значениях для атома воды - чуть больше 1.4 ангстрема<span class="citation" data-cites="j1993Elements"></span>, после вычитания максимальной возможной суммы радиусов молекул, равного 3.7(расстояние между двумя углеродами), остается больше 0.57 Å для среднего значения. В такой промежуток вода не поместится. Но если взять макисмальное из приведенных в таблице значений - 6.74, остается расстояние, равное 3.04 ангстремам. В него может уместиться молекула воды, диаметр которой чуть больше 2.8 Å.</p>
+    </div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe4.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 4</b>PHE(34) в пределах 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe5.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 5</b>PHE(34) в пределах 5Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe2-4.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 6</b>PHE(48) в пределах 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe2-5.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 7</b>PHE(48) в пределах 5Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe3-4.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 8</b>PHE(77) в пределах 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe3-5.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 9</b>PHE(77) в пределах 5Å</figcaption></figure></div>
+    <div class='col s12'><figure><a href='core.jpg'><img style='width:90%' alt='NOTFORYOU' src='core.jpg'></a>
+    <figcaption class='podpis'> <b>Рис. 10</b>Гидрофобный кластер (расстояния обозначены)</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s12'><h5> Стекинг-взаимодействия </h5></div>
+</div>
+<div class="row">
+ <div class='col s6'><p>При анализе белка были обнаружены стекинг&nbsp;&mdash; взаимодействия (перекрывания &pi;-сопряжённых систем разных молекул, расположенных на&nbsp;расстоянии не&nbsp;более 6А <span class="citation" data-cites="brylinski2018aromatic"></span>). Полный список таких взамодействий привете в&nbsp;таблице ниже.
+</p> <p>Для поиска взаимодействий были использованы функции &lsquo;measure RANGE 1.0&nbsp;ALL&lsquo; и &lsquo;restrict&rsquo; </p>
+<p> Также в&nbsp;ходе работы были обнаружены пи-катионный взаимодействия. Так называют взаимодействия катиона с&nbsp;пи-электронной плотностью на&nbsp;расстоянии не&nbsp;далее&nbsp;6А <span class="citation" data-cites="burley1986amino"></span> </p> </div>
+ <div class='col s6'>
+   <p><i>Table for stacking iteractions</i></p>
+     <table class="datatable">
+       <thead>
+       <tr class="even head"> <th>First position</th><th>First resude</th> <th>First resude chain</th> <th>Second position</th><th>Second resude</th> <th>Second resude chain</th></tr> </thead>
+       <tbody>
+                               <tr class="odd"> <td>34</td> <td>Phe</td> <td>A</td> <td>117</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>34</td> <td>Phe</td> <td>A</td> <td>35</td> <td>Trp</td> <td>A</td></tr>
+                               <tr class="odd"> <td>35</td> <td>Trp</td> <td>A</td> <td>117</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>48</td> <td>Phe</td> <td>A</td> <td>77</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="odd"> <td>168</td> <td>Phe</td> <td>A</td> <td>172</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>172</td> <td>Phe</td> <td>A</td> <td>248</td> <td>Tyr</td> <td>A</td></tr>
+                               <tr class="odd"> <td>172</td> <td>Phe</td> <td>A</td> <td>252</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>1175</td> <td>Phe</td> <td>A</td> <td>248</td> <td>Tyr</td> <td>A</td></tr>
+       <tr class="odd"> <td>203</td> <td>Phe</td> <td>A</td> <td>207</td> <td>Tyr</td> <td>A</td></tr>
+                               <tr class="even"> <td>218</td> <td>Phe</td> <td>A</td> <td>227</td> <td>Trp</td> <td>A</td></tr>
+                               <tr class="odd"> <td>218</td> <td>Phe</td> <td>A</td> <td>234</td> <td>Trp</td> <td>A</td></tr>
+       </tbody>
+     </table>
+ </div>
+</div>
+<div class="row">
+ <div class='col s6'> <figure> <a target='_blank' href='https://i.imgur.com/1sqpyLe.jpg'><img style='width:90%' alt='Not todat...' src='https://i.imgur.com/1sqpyLe.jpg'> </a>
+<figcaption class='podpis'> <b>Рис. 11</b> Стекинг между 34F, 35W и 117F. Ван-дер-Ваальсовы радуйся выделены циановым, окраска по элементам.</figcaption></figure></div>
+ <div class='col s6'> <figure> <a target='_blank' href='https://i.imgur.com/o8pclgA.jpg'> <img alt='...' style='width:90%' src='https://i.imgur.com/o8pclgA.jpg'></a>
+<figcaption class='podpis'><b> Рис. 12</b> Пи-катионныe взаимодействия 216R и 77F между 34F, 35W и 117F. Ван-дер-Ваальсовы радуйся выделены циановым, окраска по элементам. </figcaption></figure></div>
+</div>
+<div class="row">
+ <div class='col s12'>
+     <table class="datatable">
+       <thead>
+       <tr class="head even"> <th>Aromatic position</th><th>Aromatic resude</th> <th>Aromatic resude chain</th> <th>Catione position</th><th>Cation resude</th> <th>Cation resude chain</th></tr> </thead>
+       <tbody>
+       <tr class="odd"> <td>77</td> <td>Phe</td> <td>A</td> <td>216</td> <td>Arg</td> <td>A</td></tr>
+                               <tr class="even"> <td>118</td> <td>Tyr</td> <td>A</td> <td>114</td> <td>Lys</td> <td>A</td></tr>
+       </tbody>
+     </table>
+     <h5>Взаимодействие с лигандом</h5> 
+ </div>
+</div>
+<div class="row">
+ <div class='col s4'><p> При анализе гидрофобных взаимодействий нашего белка было выявлено всего одно гидрофобное взаимодействие с&nbsp;лигандом (бетаоктилгликозидом) через тирозин-231. </p> <p> Водородных, а тем более ионных связей между лигандами и белком обнаружить не удалось, хотя можно предположить их наличие. Скорее всего, это связано с недостаточным разрешением модели.</p></div>
+ <div class='col s8'><figure> <a target='_blank' href='https://i.imgur.com/6j4X9fZ.jpg'><img alt='....' style='width:90%' src='https://i.imgur.com/6j4X9fZ.jpg'> </a>
+<figcaption class='podpis'><b>Рис. 13</b> Взаимодействие бетаоктилголикозинаppда и 231Y. Вандерваальсовы радиусы выделы циановым, окраска по элементам.</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s12'>
+    <h5>Положение в мембране.</h5>
+    <p>Человеческий аквапорин 4 проходит через мембрану 6 раз. Существует программа TMHMM для быстрого предсказывания трансмембранных спиралей белков, работающая на вероятностных моделях <span class="citation" data-cites="moller2001evaluation"></span>.
+        Здесь мы сравниваем её результаты с результатами более тяжеловесных программ, считающих расположение белка с минимальной энергией.<span class="citation" data-cites="lomize2006positioning"></span></p>
+</div>
+</div>
+<div class="row">
+<div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/TMHMM.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/TMHMM.jpg'> </a>
+    <figcaption class='podpis'><b>Рис. 14</b> Положение белка в мембране согласно TMHMM. Здесь красный - внутренний, синий - трансмембранная спираль, зелёный - наружный.</figcaption></figure></div>
+<div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/opm.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/opm.jpg'> </a>
+    <figcaption class='podpis'><b>Рис. 15</b> Положение гомотетрамера согласно Orientations of Proteins in Membranes (OPM) database.</figcaption></figure></div>
+</div>
+<div class="row">
+    <div class="col s6">
+    <p>Как мы видим, точность TMHMM действительно меньше. Возможно, это объясняется в том числе тем, что она не учитывает тетрамерность.</p>
+    <p>Однако, это не помешало предсказать на основе результатов работы TMHMM пору в аквапорине, так что он подходит для начального анализа <span class="citation" data-cites="masood2015chexvis"></span>.</p></div>
+    <div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'> </a>
+            <figcaption class='podpis'><b>Рис. 16</b> Пора, предсказанная Chexvis.</figcaption></figure></div>
+</div>
+
+<div class="row">
+<div class="col s6">
+<div id='forjmol'>
+<div id='jmol' style='width:600px; height:600px; margin-left: auto; margin-right: auto'></div>
+        <div class='smth' style='width:640px; margin:5px auto'>
+        <div id='jmolStart' style='float:left'></div>
+        <div id='jmolHydrofob' style='float:left'></div>
+        <div id='jmolAroma' style='float:left'></div>
+        <div id='jmolIonic' style='float:left'></div>
+        <div id='jmolTransmembrane' style="float:left"></div>
+        <div id='jmolSurrounding' style="float:left"></div>
+        <div id='jmolResume' style='float:left'></div>
+        <div id='jmolSpinon' style='float:left'></div>
+        <div id='jmolSpinoff' style='float:left'></div></div>
+    
+   </div>
+</div></div>
+<div class="row">
+<div class="col s8">
+  <h5>Личный вклад</h5>
+  <p>Ариадна Семенова изучила гидрофобность и частично перевела статью. Егор Питиков изучил внутрибелковые стекинг взаимодействия, солевые мостики, предсказал водородные связи лиганда.
+  Полина Апель написала введение, выяснила про дисульфидные мостики и частично перевела статью. Каждый оформлял свою часть в виде HTML-страниц, Полина Апель редактировала.
+  Олег Демьянченко исследовал расположение белка в мембране, оформлял цитирование и собирал воедино работы других участников.</p>
+</div></div>
+<div class="row">
+<div class="col s12">
+    <h5>Список литературы.</h5>
+    <div id="bibliography"></div>
+</div></div>
+</div>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../libraries/bibtexParse.js"></script>
+        <script type="text/javascript" src="../bibhtml.js"></script>
+    </body>
+</html>

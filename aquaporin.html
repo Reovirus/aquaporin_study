@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../style.css">
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://vsb.fbb.msu.ru/share/jmol/jsmol/JSmol.min.js"></script>
+        <script type="text/javascript">
+                       <!-- Define basic settings for JSMol applet -->
+                       var Info = {
+                       <!-- Use external resources for JSMol execution -->
+                       serverURL: "https://chemapps.stolaf.edu/jmol/jsmol/php/jsmol.php",
+                       j2sPath: "https://vsb.fbb.msu.ru/share/jmol/jsmol/j2s/",
+                       <!-- Activate HTML5 mode -->
+                       use: "HTML5",
+
+                       <!-- Basic visual settings -->
+                       width: 600,
+                       height: 600,
+                       color: "black",
+                       script: 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/start.spt"'
+                       };
+                       <!-- After full page will be loaded -->
+                       $(document).ready(function(){
+                       <!-- Create JSMol applet with name 'JSMol' and settings from Info -->
+                       <!-- And put in element with id='jmol' -->
+                       $("#jmol").html(Jmol.getAppletHtml("JSMol", Info));
+                       $("#jmolStart").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/ligand.spt"', 'Ligand info'));
+                       $("#jmolHydrofob").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/hydrofob.spt"', 'Hydrofob Info'));
+                       $("#jmolAroma").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/aromatic.spt"', 'Aromatics Info'));
+                       $("#jmolIonic").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/ionic.spt"', 'Ionic Info'));
+                       $("#jmolTransmembrane").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~kuzka/term2/aquaporin.spt"', 'Membrane Info'));
+                       $("#jmolSurrounding").html(Jmol.jmolButton(JSMol, 'script "http://kodomo.fbb.msu.ru/~a19semenova/term2/prot.spt"', 'Surrounding Info'));
+                       $("#jmolResume").html(Jmol.jmolButton(JSMol, 'resume', 'Resume'));
+                       $("#jmolSpinon").html(Jmol.jmolButton(JSMol, 'spin on', 'Spin on'));
+                       $("#jmolSpinoff").html(Jmol.jmolButton(JSMol, 'spin off', 'Spin off'));});
+               </script>
+        <link type="text/bib" href="https://kodomo.fbb.msu.ru/~kuzka/term2/aaquaporin_bibliography.bib">
+    </head>
+    <body>
+        <div class="navbar-fixed"><nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Kuzka</a>
+                <ul class="right">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about_me.html">About myself</a></li>
+                    <li><a href="../term1/index.html">Term 1</a></li>
+                    <li><a href="../term2/index.html">Term 2</a></li>
+                    <li><a href="../cv.html">CV</a></li>
+                </ul>
+            </div>
+        </nav></div>
+        <div class="container">
+            <div class="row">
+                <div class="col s4"><img src="../kuzka.jpg" height="200"></div>
+                <div class="col s8"><h1>Human aquaporin 4.</h1></div>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                <b>PDB ID</b>: 3GD8<br>
+    <b>Uniprot ID</b>: P55087 (AQP4_HUMAN)<br>
+    <b>Function</b>: Forms a water-specific channel. Plays an important role in brain water homeostasis and in glymphatic solute transport <span class="citation" data-cites="ho2009crystal"></span> (is a functional waste clearance pathway for the vertebrate central nervous system <span class="citation" data-cites="bacyinski2017paravascular"></span>). Required for a normal rate of water exchange across the blood brain interface. Required for normal levels of cerebrospinal fluid influx into the brain cortex and parenchyma along paravascular spaces that surround penetrating arteries, and for normal drainage of interstitial fluid along paravenous drainage pathways. Thereby, it is required for normal clearance of solutes from the brain interstitial fluid, including soluble beta-amyloid peptides derived from APP. Plays a redundant role in urinary water homeostasis and urinary concentrating ability <span class="citation" data-cites="ho2009crystal"></span>.
+    <b>subcelluar location</b>: plasma membrane, endosome <span class="citation" data-cites="lundbaek2004regulation"></span> <br></div>
+</div>
+<div class='row'>
+<div class='col s8'>
+    <h5>Low-molecular-weight ligands</h5>
+    <ul>
+        <li>Glygerol (propane-1,2,3-triol)
+            <div class="row">
+            <div class="col s6"><figure><img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_1.jpg" width="90%"></figure></div>
+            <div class="col s6"><b>Brutto formula:</b> C<sub>3</sub>H<sub>8</sub>O<sub>3</sub> or CH<sub>2</sub>OH-CHOH-CH<sub>2</sub>OH<br>
+            <b>Molecular weight: </b>92.09 g/mol
+              <p><a href="https://pubchem.ncbi.nlm.nih.gov/compound/753">PubChem</a></p></div></div>
+        </li>
+
+        <li>Octyl glucoside ((2R,3S,4S,5R,6R)-2-(hydroxymethyl)-6-octoxyoxane-3,4,5-triol)
+            <div class="row">
+            <div class="col s6"><figure><a href="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_2.jpg">
+            <img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_2.jpg" width="90%"></a></figure></div>
+            <div class="col s6"><b>Brutto formula:</b> С<sub>14</sub>H<sub>28</sub>O<sub>6</sub><br>
+            <b>Molecular mass: </b>292.37 g/mol
+            <p><a href="https://pubchem.ncbi.nlm.nih.gov/compound/B-Octylglucoside">PubChem</a></p>
+            is a nonionic surfactant frequently used to solubilise integral membrane proteins for studies in biochemistry <span class="citation" data-cites="kumar2002close"></span></div>
+            </div>
+
+        </li>
+    </ul>
+    <h5>Disulphide bonds.</h5>
+    <figure><a href="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg">
+    <img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg" width="90%"></a></figure>
+    <p>No disulfide bonds were detected in the protein. There are only six cysteines in the protein, they are located at a great distance from each other. Minimal distanse between two cystein's sulfur is 12.86 Å. In the figure, cysteines are colored in orange.</p>
+    <h5>Salt bridges</h5>
+</div>
+</div>
+
+ <div class='row'>
+<div class='col s6'>
+    A salt bridge is a connection between a positively and a negatively charged particles whose length does not exceed 4A<span class="citation" data-cites="kumar2002close"></span>. Amino acids can interact in this way in proteins which are protonated (lysine, arginine, histolysis) and deprotonated (silenced, aspartate). In Aquaporin 4, 4 pairs of amino acids interact in this way (shown in table 1). The ‘measure RANDOME ALL' command and this <a href='http://pic.mbu.iisc.ernet.in/job.html'>service</a> were used to search for amino acids.
+</div>
+<div class='col s6'>
+<p><i> Table for ionic iteractions</i></p>
+ <table class="datatable">
+   <thead> <caption style='text-align:center'> Table for ionic iteractions </caption>
+   <tr class="even head"> <th>Donor position</th><th>Donor resude</th> <th>Donor chain</th> <th>Acceptor position</th><th>Acceptor resude</th> <th>Acceptor chain</th></tr> </thead>
+   <tbody>
+   <tr class="odd"> <td>41</td> <td>Glu</td> <td>A</td> <td>95</td> <td>His</td> <td>A</td></tr>
+                           <tr class="even"> <td>249</td> <td>Glu</td> <td>A</td> <td>109</td> <td>Lys</td> <td>A</td></tr>
+                           <tr class="odd"> <td>179</td> <td>Asp</td> <td>A</td> <td>181</td> <td>Lys</td> <td>A</td></tr>
+                           <tr class="even"> <td>184</td> <td>Asp</td> <td>A</td> <td>182</td> <td>Arg</td> <td>A</td></tr>
+   </tbody>
+ </table>
+</div>
+</div>
+<div class="row">
+<div class='col s6'><figure><a href='https://i.imgur.com/vTcyHlL.jpg' target='_blank'> <img style='width:90%' src='https://i.imgur.com/vTcyHlL.jpg' alt='not today...'></a><figcaption class='podpis'><b>Fig. 1</b> General view of charged AA within the protein.
+Protonated AA are colored in yellow, deprotonated in green.</figcaption></figure> </div>
+<div class='col s6'> <figure> <a href='https://i.imgur.com/N6eady7.jpg' target='_blank'> <img style='width:90%' alt='nottoday' src='https://i.imgur.com/N6eady7.jpg'></a>
+<figcaption class='podpis'><b>Fig. 2</b> An example of salt bridge between E41 and H95. Van der Waals surface is colored in cyan, atoms are colored by chemical elements.</figcaption> 	</figure>
+</div>
+</div>
+<div class="row">
+<div class='col s12'><h5>Hydrophobic clusters</h5></div>
+</div>
+<div class="row">
+<div class='col s6'>This protein is transmembrane so it has hydrophobic clusters. A hydrophobic cluster is a group of amino acids that enter into hydrophobic interactions with each other (not necessarily all with all). the ‘measure RANGE ALL ' method and the same Tull method were used to detect such clusters. As a result, 15 such clusters were found.</div>
+<div class='col s6'><figure><a href='https://i.imgur.com/J4yrgYc.gif'><img style='width:90%' alt='NOTFORYOU' src='https://i.imgur.com/J4yrgYc.gif'></a>
+<figcaption class='podpis'> <b>Fig. 3</b> Hydrophobic clusters are marked with cyan, the protein is colored by structure.</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s6'>
+    <h5>Analysis of residues' surroundings.</h5>
+    <p>
+        After reviewing the hydrophobic cores, several residues were selected that meet the requirements of the task. Environment of that residues was analyzed. Based on the actions shown in the applet, it can be concluded that the atoms completely covering the surface of the residue are located at a distance of about 5 angstroms from it. Quite a lot of surrounding atoms heave appeared at a distance of 4 angstroms, as can be seen in the drawings, but we can talk about the complete coverage of the residue at a distance of 5 angstroms. Illustrations of these situations are also provided.</p>
+    </div>
+ <div class='col s6'>
+   <p><i>Table for distance between amino acids in hydrophobic clasters</i></p>
+     <table class="datatable">
+       <thead>
+       <tr class="even head"> <th>First position</th><th>First residue</th> <th>First residue chain</th> <th>Second position</th><th>Second residue</th> <th>Second residue chain</th> <th>Distance(Å)</th></tr></thead>
+       <tbody>
+                               <tr class="odd"> <td>168</td> <td>PHE</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>3.98</td></tr>
+                               <tr class="even"> <td>248</td> <td>TYR</td> <td>A</td> <td>244</td> <td>ALA</td> <td>A</td> <td>2.82</td></tr>
+                               <tr class="odd"> <td>239</td> <td>ILE</td> <td>A</td> <td>243</td> <td>LEU</td> <td>A</td> <td>3.67</td></tr>
+                               <tr class="even"> <td>161</td> <td>LEU</td> <td>A</td> <td>165</td> <td>ILE</td> <td>A</td> <td>3.96</td></tr>
+                               <tr class="odd"> <td>164</td> <td>LEU</td> <td>A</td> <td>239</td> <td>ILE</td> <td>A</td> <td>5.08</td></tr>
+                               <tr class="even"> <td>248</td> <td>TYR</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>4.21</td></tr>
+                               <tr class="odd"> <td>252</td> <td>PHE</td> <td>A</td> <td>172</td> <td>PHE</td> <td>A</td> <td>3.7</td></tr>
+                               <tr class="even"> <td>172</td> <td>PHE</td> <td>A</td> <td>244</td> <td>ALA</td> <td>A</td> <td>6.74</td></tr>
+       </tbody>
+     </table>
+ </div>
+</div>
+<div class="row">
+    <div class="col s6">
+        <p>The table above was compiled to calculate the characteristic distance between the atoms in the nucleus. It provides distance measurements for nearby atoms in a hydrophobic cluster. The distances were calculated both for the residues located at a large distance in the chain from each other, and at a small distance. The average distance is 4.27 Å. Based on the average values for the water atom - just over 1.4 angstroms<span class="citation" data-cites="j1993Elements"></span>, after subtracting the maximum possible sum of the radii of the molecules, equal to 3.7(the distance between two carbons), it remains more than 0.57 Å for the average value. There's no room for water in that space. But if we take the maximum of the values given in the table-6.74, there remains a distance equal to 3.04 angstroms. It can fit a water molecule with a diameter of just over 2.8 Å.</p>
+    </div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe4.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 4</b>PHE(34) within 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe5.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 5</b>PHE(34) within 5Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe2-4.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 6</b>PHE(48) within 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe2-5.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 7</b>PHE(48) within 5Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe4.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe3-4.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 8</b>PHE(77) within 4Å</figcaption></figure></div>
+    <div class='col s6'><figure><a href='phe5.jpg'><img style='width:90%' alt='NOTFORYOU' src='phe3-5.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 9</b>PHE(77) within 5Å</figcaption></figure></div>
+    <div class='col s12'><figure><a href='core.jpg'><img style='width:90%' alt='NOTFORYOU' src='core.jpg'></a>
+    <figcaption class='podpis'> <b>Fig. 10</b>hydrophobic cluster with marked distances</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s12'><h5>Stacking interactions</h5></div>
+</div>
+<div class="row">
+ <div class='col s6'>
+     <p>The protein analysis revealed stacking interactions (overlaps of π-conjugated systems of different molecules located at a distance of no more than 6A <span class="citation" data-cites="brylinski2018aromatic"></span>). The full list of such interactions is provided in the table below.</p>
+     <p>The ‘measure RANGE 1.0 ALL‘ and ‘restrict’ functions were used to search for interactions. PI-cationic interactions were also revealed during the study. This term given to the interaction of a cation with a PI-electron density at a distance of no more than 6A <span class="citation" data-cites="burley1986amino"></span></p>
+</div>
+ <div class='col s6'>
+   <p><i>Table for stacking iteractions</i></p>
+     <table class="datatable">
+       <thead>
+       <tr class="even head"> <th>First position</th><th>First resude</th> <th>First resude chain</th> <th>Second position</th><th>Second resude</th> <th>Second resude chain</th></tr> </thead>
+       <tbody>
+                               <tr class="odd"> <td>34</td> <td>Phe</td> <td>A</td> <td>117</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>34</td> <td>Phe</td> <td>A</td> <td>35</td> <td>Trp</td> <td>A</td></tr>
+                               <tr class="odd"> <td>35</td> <td>Trp</td> <td>A</td> <td>117</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>48</td> <td>Phe</td> <td>A</td> <td>77</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="odd"> <td>168</td> <td>Phe</td> <td>A</td> <td>172</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>172</td> <td>Phe</td> <td>A</td> <td>248</td> <td>Tyr</td> <td>A</td></tr>
+                               <tr class="odd"> <td>172</td> <td>Phe</td> <td>A</td> <td>252</td> <td>Phe</td> <td>A</td></tr>
+                               <tr class="even"> <td>1175</td> <td>Phe</td> <td>A</td> <td>248</td> <td>Tyr</td> <td>A</td></tr>
+       <tr class="odd"> <td>203</td> <td>Phe</td> <td>A</td> <td>207</td> <td>Tyr</td> <td>A</td></tr>
+                               <tr class="even"> <td>218</td> <td>Phe</td> <td>A</td> <td>227</td> <td>Trp</td> <td>A</td></tr>
+                               <tr class="odd"> <td>218</td> <td>Phe</td> <td>A</td> <td>234</td> <td>Trp</td> <td>A</td></tr>
+       </tbody>
+     </table>
+ </div>
+</div>
+<div class="row">
+ <div class='col s6'> <figure> <a target='_blank' href='https://i.imgur.com/1sqpyLe.jpg'><img style='width:90%' alt='Not todat...' src='https://i.imgur.com/1sqpyLe.jpg'> </a>
+<figcaption class='podpis'> <b>Fig. 11</b> Stacking between 34F, 35W and 117F. Van der Waals surface is colored in cyan, atoms are colored by elements.</figcaption></figure></div>
+ <div class='col s6'> <figure> <a target='_blank' href='https://i.imgur.com/o8pclgA.jpg'> <img alt='...' style='width:90%' src='https://i.imgur.com/o8pclgA.jpg'></a>
+<figcaption class='podpis'><b>Fig. 12</b> Pi-cationic interactions 216R and 77F with 34F, 35W and 117F. Van der Waals surface is colored in cyan, atoms are colored by elements.</figcaption></figure></div>
+</div>
+<div class="row">
+ <div class='col s12'>
+     <table class="datatable">
+       <thead>
+       <tr class="head even"> <th>Aromatic position</th><th>Aromatic resude</th> <th>Aromatic resude chain</th> <th>Catione position</th><th>Cation resude</th> <th>Cation resude chain</th></tr> </thead>
+       <tbody>
+       <tr class="odd"> <td>77</td> <td>Phe</td> <td>A</td> <td>216</td> <td>Arg</td> <td>A</td></tr>
+                               <tr class="even"> <td>118</td> <td>Tyr</td> <td>A</td> <td>114</td> <td>Lys</td> <td>A</td></tr>
+       </tbody>
+     </table>
+     <h5>Interaction with the ligand</h5> 
+ </div>
+</div>
+<div class="row">
+ <div class='col s4'>
+     <p>During the analysis of hydrophobic interactions of our protein revealed only one hydrophobic interaction with a ligand (betaoctilglycoside) via tyrosine-231.</p>
+     <p>Hydrogen and ionic bonds between ligands and protein could not be detected, although it is possible to assume their presence. This can be most likely explained by insufficient model resolution.</p>
+     </div>
+ <div class='col s8'><figure> <a target='_blank' href='https://i.imgur.com/6j4X9fZ.jpg'><img alt='....' style='width:90%' src='https://i.imgur.com/6j4X9fZ.jpg'> </a>
+<figcaption class='podpis'><b>Fig. 13</b> Interaction between octyl glucoside and 231Y. ВVan der Waals surface is colored in cyan, atoms are colored by elements.</figcaption></figure></div>
+</div>
+<div class="row">
+<div class='col s12'>
+    <h5>Position in the membrane..</h5>
+    <p>Human aquaporin 4 passes through the membrane 6 times. There is a TMHMM program for rapid analysis of protein transmembrane helices based on probabilistic models <span class="citation" data-cites="moller2001evaluation"></span>. We compare here it’s results with the results of heavier programs that estimate the conformation of a protein with minimal energy. <span class="citation" data-cites="lomize2006positioning"></span></p>
+</div>
+</div>
+<div class="row">
+<div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/TMHMM.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/TMHMM.jpg'> </a>
+    <figcaption class='podpis'><b>Fig. 14</b> Position of the protein according to TMHMM. Here red is intracellular, blue are transmembrane helices, green is extracellular.</figcaption></figure></div>
+<div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/opm.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/opm.jpg'> </a>
+    <figcaption class='podpis'><b>Fig. 15</b> Position of the homotetramer according to Orientations of Proteins in Membranes (OPM) database.</figcaption></figure></div>
+</div>
+<div class="row">
+    <div class="col s6">
+    <p>We can see that the accuracy of TMHMM is actually less than in previous measurements. We can suggest that this the difference is detected partly due to the fact that TMHMM does not take into account tetramericity.</p>
+    <p>However, this did not prevent to predict the pore in aquaporin based on TMHMM results, so it is suitable for initial analysis <span class="citation" data-cites="masood2015chexvis"></span>.</p>
+    </div>
+    <div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'> </a>
+            <figcaption class='podpis'><b>Fig. 16</b> A pore, predicted by Chexvis.</figcaption></figure></div>
+</div>
+<div class="row">
+<div class="col s6">
+<div id='forjmol'>
+<div id='jmol' style='width:600px; height:600px; margin-left: auto; margin-right: auto'></div>
+        <div class='smth' style='width:640px; margin:5px auto'>
+        <div id='jmolStart' style='float:left'></div>
+        <div id='jmolHydrofob' style='float:left'></div>
+        <div id='jmolAroma' style='float:left'></div>
+        <div id='jmolIonic' style='float:left'></div>
+        <div id='jmolTransmembrane' style="float:left"></div>
+        <div id='jmolSurrounding' style="float:left"></div>
+        <div id='jmolResume' style='float:left'></div>
+        <div id='jmolSpinon' style='float:left'></div>
+        <div id='jmolSpinoff' style='float:left'></div></div>
+    
+   </div>
+</div></div>
+<div class="row">
+<div class="col s8">
+  <h5>Personal contribution</h5>
+  <p>Ariadnа Semenova studied the hydrophobicity and partially translated the article. Egor Pitikov studied intra-protein stacking interactions, salt bridges and predicted hydrogen bonds of ligand. Polina Apel wrote the introduction, found out information about disulfide bridges and partially translated the article. Everyone wrote their part in the form of HTML pages and then Polina Apel edited it. Oleg Demyanchenko studied the location of the protein in the membrane, issued citation and merged all others' participants work.</p>
+</div></div>
+<div class="row">
+<div class="col s12">
+    <h5>Bibliography.</h5>
+    <div id="bibliography"></div>
+</div></div>
+</div>
+        <script type="text/javascript" src="../js/materialize.min.js"></script>
+        <script type="text/javascript" src="../libraries/bibtexParse.js"></script>
+        <script type="text/javascript" src="../bibhtml.js"></script>
+    </body>
+</html>
