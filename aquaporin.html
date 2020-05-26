@@ -55,7 +55,7 @@
         <div class="container">
             <div class="row">
                 <div class="col s4"><img src="../kuzka.jpg" height="200"></div>
-                <div class="col s8"><h1>Human aquaporin 4.</h1></div>
+                <div class="col s8"><h1>Human aquaporin 4 (EN, <a href="aquaporin_ru.html">RU</a>).</h1></div>
             </div>
             <div class="row">
                 <div class="col s12">
@@ -231,7 +231,28 @@ Protonated AA are colored in yellow, deprotonated in green.</figcaption></figure
 <div class="row">
 <div class='col s12'>
     <h5>Position in the membrane..</h5>
-    <p>Human aquaporin 4 passes through the membrane 6 times. There is a TMHMM program for rapid analysis of protein transmembrane helices based on probabilistic models <span class="citation" data-cites="moller2001evaluation"></span>. We compare here it’s results with the results of heavier programs that estimate the conformation of a protein with minimal energy. <span class="citation" data-cites="lomize2006positioning"></span></p>
+    <p>Human aquaporin 4 passes through the membrane 6 times. There is a TMHMM program for rapid analysis of protein transmembrane helices based on probabilistic models <span class="citation" data-cites="moller2001evaluation"></span>. We compare here it’s results with the results of heavier programs that estimate the conformation of a protein with minimal energy. <span class="citation" data-cites="lomize2006positioning"></span>. Here is TMHMM output.</p>
+    <pre style="color: black;background-color: gray">
+# sp|P55087|AQP4_HUMAN Length: 323
+# sp|P55087|AQP4_HUMAN Number of predicted TMHs:  6
+# sp|P55087|AQP4_HUMAN Exp number of AAs in TMHs: 134.87582
+# sp|P55087|AQP4_HUMAN Exp number, first 60 AAs:  21.68082
+# sp|P55087|AQP4_HUMAN Total prob of N-in:        0.99818
+# sp|P55087|AQP4_HUMAN POSSIBLE N-term signal sequence
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	     1    32
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	    33    55
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	    56    69
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	    70    92
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	    93   111
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   112   134
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	   135   153
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   154   176
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	   177   188
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   189   211
+sp|P55087|AQP4_HUMAN	TMHMM2.0	outside	   212   230
+sp|P55087|AQP4_HUMAN	TMHMM2.0	TMhelix	   231   253
+sp|P55087|AQP4_HUMAN	TMHMM2.0	inside	   254   323
+    </pre>
 </div>
 </div>
 <div class="row">
@@ -242,7 +263,7 @@ Protonated AA are colored in yellow, deprotonated in green.</figcaption></figure
 </div>
 <div class="row">
     <div class="col s6">
-    <p>We can see that the accuracy of TMHMM is actually less than in previous measurements. We can suggest that this the difference is detected partly due to the fact that TMHMM does not take into account tetramericity.</p>
+    <p>We can see that the accuracy of TMHMM is actually less OPM's. As you can see on the figure and in jmol applet below, in TMHMM borders between cytoplasmic side and transmembrane regions and extacellular and transmembrane regions are far from being in two parralel planes, which you cannot say about OPM. We can suggest that this the difference is detected partly due to the fact that TMHMM does not take into account tetramericity.</p>
     <p>However, this did not prevent to predict the pore in aquaporin based on TMHMM results, so it is suitable for initial analysis <span class="citation" data-cites="masood2015chexvis"></span>.</p>
     </div>
     <div class='col s6'><figure> <a target='_blank' href='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'><img alt='....' style='width:90%' src='https://kodomo.fbb.msu.ru/~kuzka/term2/chexvis.jpg'> </a>
