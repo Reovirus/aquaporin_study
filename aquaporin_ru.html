@@ -112,7 +112,7 @@
     <figure><a href="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg">
     <img src="http://kodomo.fbb.msu.ru/~polina-apel/term2/3GD8_cys.jpg" width="90%"></a></figure>
     <p>В белке не обнаружены дисульфидные связи. В белке всего шесть цистеинов, они расположены на большом расстоянии друг от друга. Минимальное расстояние
-    между двумя серами цистеинов - 12.86 Å. На рисунке цистеины выделены оранжевым.</p>
+    между двумя серами цистеинов - 12.86 Å. На рисунке цистеины выделены оранжевым.</p>
     <h5> Солевые мостики</h5>
 </div>
 </div>
@@ -238,14 +238,53 @@ Cолевой мостик&nbsp;&mdash; связь между положител
                                <tr class="even"> <td>118</td> <td>Tyr</td> <td>A</td> <td>114</td> <td>Lys</td> <td>A</td></tr>
        </tbody>
      </table>
+    </div>
+
+<div class="row">
+<div class='col s12'>
      <h5>Взаимодействие с лигандом</h5> 
  </div>
 </div>
-<div class="row">
- <div class='col s4'><p> При анализе гидрофобных взаимодействий нашего белка было выявлено всего одно гидрофобное взаимодействие с&nbsp;лигандом (бетаоктилгликозидом) через тирозин-231. </p> <p> Водородных, а тем более ионных связей между лигандами и белком обнаружить не удалось, хотя можно предположить их наличие. Скорее всего, это связано с недостаточным разрешением модели.</p></div>
- <div class='col s8'><figure> <a target='_blank' href='https://i.imgur.com/6j4X9fZ.jpg'><img alt='....' style='width:90%' src='https://i.imgur.com/6j4X9fZ.jpg'> </a>
+ <div class='col s6'><p> При анализе гидрофобных взаимодействий нашего белка было выявлено всего одно гидрофобное взаимодействие с&nbsp;лигандом (бетаоктилгликозидом) через тирозин-231.
+
+Водородных, а&nbsp;тем более ионных связей между лигандами и&nbsp;белком обнаружить не&nbsp;удалось, хотя можно предположить их&nbsp;наличие. Скорее всего, это связано с&nbsp;недостаточным разрешением модели.</p>
+
+
+<p>Однако чтобы всё-таки выяснить возможные водородные связи с&nbsp;лигандом, можно попробовать найти атомы, которые гипотетически могут образовать такую связь на&nbsp;небольшом расстоянии. Например, выбрать атомы кислорода в&nbsp;лиганде, учитывая, что они могут быть неплохими акцепторами водородных связей, а&nbsp;любой кислород или азот в&nbsp;белке&nbsp;&mdash; хорошим донором. Расстоянием для образования водородной связи считалось 1-7А. Ссылка на&nbsp;скрипт <a href='https://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/hnbonds_ligand' target='_blank'>вот</a>.</p></div>
+ 
+ <div class='col s6'>
+   <p><i>Table for hbonds with ligand</i></p>
+     <table class="datatable">
+       <thead>
+       <tr class="even head"> <th>ligand</th><th>Resude</th> </thead>
+       <tbody>
+                               <tr class="odd"> <td>BOG</td> <td>Glu228</td> </tr>
+                               <tr class="even"> <td>BOG</td> <td>Asn229</td> </tr>
+                               <tr class="odd"> <td>GOL4</td> <td>Ser188</td> </tr>
+                               <tr class="even"> <td>GOL4</td> <td>Gln86</td> </tr>
+                               <tr class="odd"> <td>GOL3</td> <td>Tyr207</td> </tr>
+                               <tr class="even"> <td>GOL3</td> <td>Asn206</td> </tr>
+                               <tr class="odd"> <td>GOL1</td> <td>Thr56</td> </tr>
+                               <tr class="even"> <td>GOL1</td> <td>Asn58</td> </tr>
+       </tbody>
+     </table>
+
+ <div class='col s6'><figure> <a target='_blank' href='https://i.imgur.com/6j4X9fZ.jpg'><img alt='....' style='width:90%' src='https://i.imgur.com/6j4X9fZ.jpg'> </a>
 <figcaption class='podpis'><b>Рис. 13</b> Взаимодействие бетаоктилголикозинаppда и 231Y. Вандерваальсовы радиусы выделы циановым, окраска по элементам.</figcaption></figure></div>
+<div class='col s6'><figure> <a target='_blank' href='https://imgur.com/QcVypBb'><img alt='....' style='width:90%' src='https://imgur.com/QcVypBb'> </a>
+<figcaption class='podpis'><b>Рис. 14</b>Предполагаемые водородные связи лиганда.</figcaption></figure></div>
 </div>
+
+<div class="row">
+<div class='col s12'>
+     <h5>Взаимодействие с лигандом</h5> 
+ </div>
+</div>
+ <div class='col s6'><p> В&nbsp;нашем белке есть и&nbsp;водородные связи. Безусловно, это водородные связи в&nbsp;его скелете (как и&nbsp;любого другого белка). Найти их&nbsp;можно командой select backbone; calculate hbonds, так как они &laquo;вбиты&raquo; в&nbsp;файл независимо от&nbsp;разрешения. Из&nbsp;получившихся результатов видно, что белок образован классическими 13-4&nbsp;спиралями, ибо все связи, кроме связи аминокислоты с&nbsp;аминокислотой через 4&nbsp;остатка нестабильны (углы сильно отличны от&nbsp;180&nbsp;градусов). Ссылка на&nbsp;таблицу с&nbsp;параметрами водородных связей, полученных вот этим тулом, <a href='http://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/chain-chain.txt' target='_blank'>вот</a>.</p>
+
+
+<p>Со&nbsp;связями между боковыми цепями сложнее. Их&nbsp;можно посчитать руками, например в&nbsp;качестве донора водородной связи атомы кислорода и&nbsp;азота в&nbsp;амино и&nbsp;гидроксильных группах, а&nbsp;в&nbsp;качестве акцептора&nbsp;&mdash; любой достаточно электроотрицательный атом. Однако для большей надежности мы&nbsp;решили мы&nbsp;решили воспользоваться вот этим тулом. Результат его работы  <a href='https://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/chain-side.txt' target='_blank'>вот</a> (для взаимодействий боковая группа-скелет, все связи довольно нестабильны) и&nbsp; <a href='https://kodomo.fbb.msu.ru/~pitikov.egor/term2/cot_at_sct/side-side.txt' target='_blank'>вот</a> (для взаимодействий боковая группа-боковая группа)</p>.</div>
+
 <div class="row">
 <div class='col s12'>
     <h5>Положение в мембране.</h5>
